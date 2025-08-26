@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #a2f08d;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
    
 h1 {
@@ -185,7 +185,6 @@ h1 {
     gap: 8px;
 }
 
-/* BTN AUMENTAR OU DIMINUIR QUANTIDADE*/
 .btn-quantidade {
     background-color: #2e8b57;
     border: none;
@@ -200,7 +199,6 @@ h1 {
     background-color: #246f47;
 }
 
-/* VALOR TOTAL DOS ITENS */
 #total-carrinho {
     font-weight: bold;
     font-size: 18px;
@@ -208,7 +206,6 @@ h1 {
     color: black;
 }
 
-/* BOTÃO FINALIZAR */
 #btn-finalizar {
     margin-top: 15px;
     width: 100%;
@@ -225,3 +222,47 @@ h1 {
     background-color: #246f47;
 }
 
+.carrossel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 450px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}

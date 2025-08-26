@@ -5,6 +5,12 @@ const totalCarrinho = document.getElementById('total-carrinho');
 const contadorQuantidade = document.getElementById('contador-quantidade');
 const btnFinalizar = document.getElementById('btn-finalizar');
 
+const carrossel = document.querySelector('#carrossel');
+const slides = carrossel.querySelector('.slides');
+const slideItems = carrossel.querySelectorAll('.slide');
+const prevButton = carrossel.querySelector('.prev');
+const nextButton = carrossel.querySelector('.next');
+
     
 let carrinhoProdutos = {};
 
@@ -143,3 +149,22 @@ function inicializarCarrinho() {
 
 
 inicializarCarrinho();
+
+
+let currentIndex = 0;
+
+function updateCarrossel() {
+    const offset = -currentIndex * 100;
+    slides.style.transform = `translateX(${offset}%)`;
+}
+
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : slideItems.length - 1;
+    updateCarrossel();
+});
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex < slideItems.length - 1) ? currentIndex + 1 : 0;
+    updateCarrossel();
+});;
+
