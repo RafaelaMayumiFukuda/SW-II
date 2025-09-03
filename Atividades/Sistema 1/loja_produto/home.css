@@ -1,10 +1,16 @@
-body {
+/*body { 
     font-family: Arial, sans-serif;
     background-image: url("img/fundo.jpg");
     margin: 0;
     padding: 0;
+}*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4ea98;
+    margin: 0;
+    padding: 0;
 }
-   
 
 h1 {
     text-align: center;
@@ -14,6 +20,25 @@ h1 {
     padding: 10px;               
     border-radius: 8px;          
   }
+
+nav {
+    
+    position: sticky; top: 0;
+    background: var(--nav);
+    border-bottom: 1px solid #e5e7eb;
+
+}
+
+.btn-nav {
+    appearance: none;
+    border: 0;
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease, background-color .12s ease;
+    box-shadow: 0 1px 0 rgba(0,0,0,.04);
+}
   
 
 .produtos-container {
